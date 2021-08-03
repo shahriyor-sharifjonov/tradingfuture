@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'Benzin';
+  src: url('../fonts/Benzin Bold.woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Benzin';
+  src: url('../fonts/Benzin Extra Bold.woff2');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Benzin';
+  src: url('../fonts/Benzin Semibold.woff2');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Benzin';
+  src: url('../fonts/Benzin Medium.woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Benzin';
+  src: url('../fonts/Benzin Regular.woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Black.woff2');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-ExtraBold.woff2');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-SemiBold.woff2');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Medium.woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Light.woff2');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-ExtraLight.woff2');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Thin.woff2');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?u80yaj');
+  src:  url('../fonts/icomoon.eot?u80yaj#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?u80yaj') format('truetype'),
+    url('../fonts/icomoon.woff?u80yaj') format('woff'),
+    url('../fonts/icomoon.svg?u80yaj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down::before {
+  content: "\e900";
+  color: #fff;
+}
