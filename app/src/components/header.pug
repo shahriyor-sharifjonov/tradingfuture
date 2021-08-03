@@ -2,9 +2,37 @@ mixin header()
   header.header#header
     nav.header__nav.container
       a(href="index.html").header__logo
-        img(src="images/logo.webp", alt="").header__logo-img
+        img(src="images/logo.webp", alt="Trading Future").header__logo-img
         p.header__logo-p Trading future.io
       .header__content 
-        button.header__lang 
-           
-         
+        button(type="button").header__lang.header__lang_main
+          img(src="images/eng.webp", alt="eng").header__lang-img 
+          p.header__lang-p eng
+        .header__button 
+          span.header__button-line
+    .header__menu
+      .header__menu-body 
+        ul.header__list   
+          li.header__li   
+            a(href="#!").header__link.current-link Главная 
+          li.header__li   
+            a(href="#!").header__link Как работаем 
+          li.header__li   
+            a(href="#!").header__link Как начать работу 
+          li.header__li   
+            a(href="#!").header__link Почему стоит работать 
+          li.header__li   
+            a(href="#!").header__link Отчет 
+          li.header__li   
+            a(href="#!").header__link Отзывы 
+          li.header__li   
+            a(href="#!").header__link Вопрос-ответ 
+          li.header__li   
+            a(href="#!").header__link Контакты 
+        button(type="button").header__lang.header__lang_secondary
+          img(src="images/eng.webp", alt="eng").header__lang-img 
+          p.header__lang-p eng
+        .header__gradient
+        .header__lines
+          .header__line.header__line_1
+          .header__line.header__line_2
