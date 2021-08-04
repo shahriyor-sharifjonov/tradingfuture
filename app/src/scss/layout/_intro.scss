@@ -1,12 +1,15 @@
 .intro{
   overflow: hidden;
-  min-height: 100vh;
+  // min-height: 100vh;
   max-width: 100%;
   margin-top: -134px;
   box-shadow: inset 0px -90px 80px #000000, inset 150px 70px 80px #000000;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @include media($lg){
+    margin-top: -100px;
+  }
   @include media($sm){
     box-shadow: none;
   }
@@ -57,7 +60,7 @@
   &__left{
     position: relative;
     width: 50%;
-    height: 100vh;
+    height: 589px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,7 +165,7 @@
       position: absolute;
       left: 50%;
       top: 134px;
-      height: calc(100vh - 150px);
+      height: 589px - 134px;
       z-index: -3;
       max-width: 50%;
       object-fit: cover;
@@ -171,12 +174,12 @@
         height: 442px;
         left: 60%;
         transform: translateX(-50%);
-        top: 40px;
+        top: 80px;
         max-width: 70%;
         margin-top: 134px;
       }
       @include media($md){
-        top: 0px;
+        top: 40px;
       }
       @include media($sm){
         left: 50%;
