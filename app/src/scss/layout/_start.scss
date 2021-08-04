@@ -34,6 +34,7 @@
     align-items: center;
     padding-top: 25px;
     padding-bottom: 25px;
+    position: relative;
     &-p{
       text-align: center;
       margin-top: 20px;
@@ -43,5 +44,13 @@
       color: #FFFFFF;
       font-weight: 400;
     }
+  }
+  &__gradient{
+    @include gradient(150px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
   }
 }

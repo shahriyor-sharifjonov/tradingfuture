@@ -1,0 +1,109 @@
+.advantages{
+  margin-top: 43px;
+  margin-bottom: 55px;
+  &__body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__title{
+    font-size: 30px;
+    line-height: 168.9%;
+    text-align: right;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 25px;
+    @include media(1100){
+      font-size: 24px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  &__subtitle{
+    font-size: 24px;
+    line-height: 170%;
+    font-weight: 500;
+    text-align: right;
+    color: #FFFFFF;
+    @include media(1100){
+      font-size: 14px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  &__items{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    &:last-of-type{
+      margin-bottom: 50px;
+    }
+    @include media(1100){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__item{
+    max-width: 289px;
+    width: 100%;
+    position: relative;
+    &:not(:last-child){
+      margin-right: 100px;
+      @include media(1100){
+        margin-right: 0;
+      }
+    }
+    &-top{
+      position: relative;
+    }
+    &-title{
+      @extend .text-with-inner-shadow;
+      font-size: 144px;
+      line-height: 1.2;
+      font-weight: 800;
+      text-align: center;
+    }
+    &-img{
+      position: absolute;
+      top: 56%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &-subtitle{
+      font-size: 16px;
+      line-height: 170%;
+      text-align: center;
+      color: #FFFFFF;
+      margin-bottom: 5px;
+    }
+    &-p{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 191.5%;
+      text-align: center;
+      color: #FFFFFF;
+      opacity: 0.8;
+    }
+    &-gradient{
+      @include gradient(200px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
+  &__btn{
+    margin: 0 auto;
+    max-width: 289px;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @extend .btn-with-gradient;
+  }
+}
