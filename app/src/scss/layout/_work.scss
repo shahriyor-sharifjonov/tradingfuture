@@ -111,7 +111,7 @@
     &:nth-child(odd){
       margin-right: 30px;
       @include media($sm){
-        margin-right: 0;
+        margin-right: 0; 
       }
     }
     &-title{
