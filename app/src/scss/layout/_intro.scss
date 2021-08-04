@@ -152,6 +152,10 @@
       width: 100%;
       padding: 13px 0;
     }
+    @include media($md){
+      font-size: 12px;
+      width: 280px;
+    }
   }
   &__right{
     &-img{

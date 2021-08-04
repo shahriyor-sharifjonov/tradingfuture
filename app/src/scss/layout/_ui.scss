@@ -28,12 +28,16 @@ $gradient: linear-gradient(275.37deg, #476172 0%, #3094C4 100%);
 }
 html{
   min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 body{
   font-family: 'Benzin';
   background: #000;
   min-height: 100vh;
   color: #fff;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 button{
   border: none;
