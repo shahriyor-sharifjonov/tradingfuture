@@ -1,0 +1,22 @@
+mixin contacts()
+  .contacts
+    .contacts__body.container 
+      h2.contacts__title Контакты
+      .contacts__row 
+        .contacts__item 
+          .contacts__item-top 
+            h3.contacts__item-title E-MAIL
+            img(src="images/email.svg", alt="email").contacts__item-img
+          p.contacts__item-p Lorem ipsum dolor
+        .contacts__item 
+          .contacts__item-top 
+            h3.contacts__item-title TELEGRAM
+            img(src="images/paper-plane.svg", alt="email").contacts__item-img
+          p.contacts__item-p Lorem ipsum dolor
+      .contacts__bottom 
+        .contacts__bottom-left 
+          img(src="images/form.webp", alt="robot")
+        .contacts__bottom-right
+          h2.contacts__title Остались вопросы?
+          p.contacts__p В течении 30 минут наш менеджер ответит на все ваши вопросы
+          form(action="").contacts__form
