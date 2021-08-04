@@ -1,0 +1,183 @@
+.intro{
+  overflow: hidden;
+  min-height: 100vh;
+  max-width: 100%;
+  margin-top: -134px;
+  box-shadow: inset 0px -90px 80px #000000, inset 150px 70px 80px #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include media($sm){
+    box-shadow: none;
+  }
+  &__gradient{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include gradient(200px);
+    z-index: -1;
+  }
+  &__lines{
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    z-index: -2;
+    width: 500px;
+    height: 100vh;
+    @include media($lg){
+      display: none;
+    }
+  }
+  &__line_1{
+    position: absolute;
+    width: 20px;
+    height: 140%;
+    top: -60px;
+    left: 200px;
+    background: rgb(216,214,247);
+    background: linear-gradient(86deg, rgba(216,214,247,0) 0%, rgba(52,67,88,0.2) 100%);
+    transform: rotate(-23.69deg);
+  }
+  &__line_2{
+    position: absolute;
+    width: 87px;
+    height: 140%;
+    top: -60px;
+    left: 250px;
+    background: rgb(216,214,247);
+    background: linear-gradient(86deg, rgba(216,214,247,0) 0%, rgba(52,67,88,0.2) 100%);
+    transform: rotate(-23.69deg);
+  }
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__left{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include media($lg){
+      height: max-content;
+      width: 100%;
+    }
+    &-content{
+      @include media($lg){
+        padding-top: 134px;
+        width: 100%;
+      }
+      @include media($md){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  &__title{
+    margin-bottom: 30px;
+    font-size: 42px;
+    line-height: 120%;
+    color: #FFFFFF;
+    @include media($lg){
+      margin-bottom: 367px;
+      text-align: center;
+    }
+    @include media($md){
+      font-size: 27px;
+      line-height: 32px;
+    }
+  }
+  &__p{
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    max-width: 538px;
+    @include media($lg){
+      text-align: center;
+      max-width: max-content;
+    }
+    @include media($md){
+      font-size: 12px;
+      line-height: 181.4%;
+      max-width: 300px;
+      margin-bottom: 35px;
+    }
+  }
+  &__btns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include media($lg){
+      flex-direction: column;
+    }
+  }
+  &__btn{
+    max-width: 280px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    font-size: 14px;
+    line-height: 168.9%;
+    color: #FFFFFF;
+    &:not(:last-child){
+      margin-right: 20px;
+      @extend .btn-with-gradient;
+      @include media($lg){
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+    &:last-child{
+      border: 2px solid;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(275.37deg, #476172 0%, #3094C4 100%);
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+    @include media($xl){
+      font-size: 14px;
+      max-width: max-content;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include media($lg){
+      max-width: 280px;
+      width: 100%;
+      padding: 13px 0;
+    }
+  }
+  &__right{
+    &-img{
+      position: absolute;
+      left: 50%;
+      top: 134px;
+      height: calc(100vh - 150px);
+      z-index: -3;
+      max-width: 50%;
+      object-fit: cover;
+      object-position: left;
+      @include media($lg){
+        height: 442px;
+        left: 60%;
+        transform: translateX(-50%);
+        top: 40px;
+        max-width: 70%;
+        margin-top: 134px;
+      }
+      @include media($md){
+        top: 0px;
+      }
+      @include media($sm){
+        left: 50%;
+        max-width: 100%;
+      }
+    }
+  }
+}
