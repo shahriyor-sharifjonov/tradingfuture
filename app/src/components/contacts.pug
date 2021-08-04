@@ -23,7 +23,10 @@ mixin contacts()
           p.contacts__bottom-p В течении 30 минут наш менеджер ответит на все ваши вопросы
           form(action="").contacts__form
             .contacts__form-row 
-              input(type="text" data-value="Имя:").contacts__input
-              input(type="text" data-value="E-mail:").contacts__input
-            textarea(name="", cols="30", rows="10" data-value="E-mail:").contacts__input
+              .contacts__input-parent(data-value="Имя: ")
+                input(type="text").contacts__input
+              .contacts__input-parent(data-value="E-mail: ").ml20
+                input(type="text").contacts__input
+            .contacts__input-parent(data-value="E-mail: ").mt20
+              textarea(name="", cols="30", rows="10").contacts__textarea
             button(type="submit").contacts__btn Отправить
