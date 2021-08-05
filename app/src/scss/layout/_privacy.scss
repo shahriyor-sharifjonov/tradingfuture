@@ -1,0 +1,84 @@
+.privacy{
+  box-shadow: inset 0px -90px 80px #000000, inset 150px 70px 80px #000000;
+  margin-top: -134px;
+  overflow: hidden;
+  &__body{
+    position: relative;
+    padding-top: 184px;
+  }
+  &__gradient{
+    @include gradient(200px);
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    z-index: -2;
+  }
+  &__title{
+    font-size: 30px;
+    line-height: 168.9%;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    @include media($md){
+      text-align: center;
+      font-size: 19px;
+      line-height: 22px;
+    }
+  }
+  &__subtitle{
+    font-size: 20px;
+    line-height: 170%;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    @include media($md){
+      text-align: center;
+      font-size: 14px;
+      line-height: 170%;
+    }
+  }
+  &__p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 225.5%;
+    color: #FFFFFF;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    @include media($md){
+      font-size: 12px;
+      line-height: 225.5%;
+    }
+  }
+  .blue{
+    color: #3094C3;
+    font-weight: 600;
+  }
+  &__lines{
+    box-shadow: inset 150px 70px 80px #000000;
+    max-height: 522px;
+    position: absolute;
+    overflow-y: hidden;
+    z-index: -2;
+  }
+  &__line{
+    max-height: 200%;
+    z-index: -3;
+  }
+  &__btn{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 280px;
+    margin: 20px auto 0;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(275.37deg, #476172 0%, #3094C4 100%);
+    padding: 18px 0;
+    font-size: 12px;
+    line-height: 168.9%;
+    color: #FFFFFF;
+  }
+}
