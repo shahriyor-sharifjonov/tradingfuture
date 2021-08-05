@@ -89,6 +89,7 @@
     }
   }
   &__input{
+    padding-left: 70px;
     &-parent{
       position: relative;
       &.ml20{
@@ -100,12 +101,12 @@
       &::before{
         content: attr(data-value);
         position: absolute;
-        top: 50%;
+        top: 19px;
         left: 10px;
         transform: translateY(-50%);
         font-size: 14px;
         color: #FFFFFF;
-        line-height: 2.5;
+        line-height: 1;
       }
     }
   }
