@@ -1,11 +1,85 @@
 .footer{
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 100px;
+  &__gradient{
+    @include gradient(200px);
+    position: absolute;
+    top: 200px;
+    right: 400px;
+    z-index: -2;
+    @include media($lg){
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(275.37deg, #476172 0%, #3094C4 100%);
+    filter: blur(6px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+  }
+  &__logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: max-content;
+    @include media(1200){
+      margin: 0 auto 50px 0;
+    }
+    &-img{
+      max-width: 100%;
+      margin-right: 20px;
+      @include media($md){
+        max-width: 100% !important;
+        margin-right: 20px !important;
+      }
+      @include media($sm){
+        margin-right: 5px !important;
+        width: 60px;
+      }
+    }
+    &-p{
+      max-width: 104px;
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: 700;
+      @include media($md){
+        max-width: 104px !important;
+        font-size: 20px !important;
+        line-height: 23px !important;
+        font-weight: 700 !important;
+      }
+      @include media($sm){
+        font-size: 14px !important;
+        line-height: 20px !important;
+      }
+    }
+  }
   &__body{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
+    @include media(1200){
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__list{
     width: 281px;
+    @include media(1200){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+    }
   }
   &__btns{
     display: flex;
@@ -16,6 +90,19 @@
     width: 280px;
     &:first-child{
       margin-bottom: 30px;
+    }
+    @include media(1200){
+      max-width: 289px !important;
+      padding: 13px 0;
+    }
+  }
+  &__lang{
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    @include media($sm){
+      top: 12px;
+      padding: 7px 13px;
     }
   }
 }
