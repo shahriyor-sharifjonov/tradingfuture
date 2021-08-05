@@ -1,0 +1,10 @@
+.footer{
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__lang{
+    margin: 0 auto;
+  }
+}
