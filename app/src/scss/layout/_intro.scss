@@ -129,7 +129,7 @@
     font-size: 14px;
     line-height: 168.9%;
     color: #FFFFFF;
-    &:not(:last-child){
+    &:first-child{
       margin-right: 20px;
       @extend .btn-with-gradient;
       @include media($lg){
@@ -137,7 +137,7 @@
         margin-bottom: 30px;
       }
     }
-    &:last-child{
+    &:last-of-type{
       border: 2px solid;
       border-image-slice: 1;
       border-image-source: linear-gradient(275.37deg, #476172 0%, #3094C4 100%);

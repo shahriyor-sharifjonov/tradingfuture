@@ -1,2 +1,21 @@
 .footer{
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__list{
+    width: 281px;
+  }
+  &__btns{
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn{
+    margin-right: 0 !important;
+    width: 280px;
+    &:first-child{
+      margin-bottom: 30px;
+    }
+  }
 }
