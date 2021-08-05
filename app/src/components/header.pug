@@ -36,3 +36,33 @@ mixin header()
         .header__lines
           .header__line.header__line_1
           .header__line.header__line_2
+
+mixin header2()
+  header.header#header
+    nav.header__nav.container
+      a(href="index.html").header__logo
+        img(src="images/logo.webp", alt="Trading Future").header__logo-img
+        p.header__logo-p Trading future.io
+      .header__content 
+        button(type="button").header__lang.header__lang_main
+          img(src="images/eng.webp", alt="eng").header__lang-img 
+          p.header__lang-p eng
+        .header__button 
+          span.header__button-line
+    .header__menu
+      .header__menu-body.header__menu-body_2
+        h3.header__title Меню личного кабинета
+        ul.header__list 
+          li.header__li 
+            a(href="#!").header__link.current-link Главная
+          li.header__li 
+            a(href="#!").header__link Личные данные
+          li.header__li 
+            a(href="#!").header__link.dropdown__button Бот <span class="icon-arrow-down"><span>   
+        button(type="button").header__lang.header__lang_secondary
+          img(src="images/eng.webp", alt="eng").header__lang-img 
+          p.header__lang-p eng
+        .header__gradient
+        .header__lines
+          .header__line.header__line_1
+          .header__line.header__line_2

@@ -1,0 +1,78 @@
+.auth{
+  box-shadow: inset 0px -90px 80px #000000, inset 150px 70px 80px #000000;
+  margin-top: -134px;
+  overflow: hidden;
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 184px;
+  }
+  &__content{
+    position: relative;
+    max-width: 50%;
+    width: 100%;
+  }
+  &__title{
+    font-size: 30px;
+    line-height: 168.9%;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+  }
+  &__gradient{
+    @include gradient(200px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+  }
+  &__inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  &__input-parent{
+    position: relative;
+    max-width: calc(50% - 10px);
+    width: 100%;
+    &:first-of-type{
+      margin-right: 20px;
+    }
+    &::before{
+      content: attr(data-value);
+      position: absolute;
+      top: 9px;
+      left: 10px;
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+  &__input{
+    max-width: 100%;
+    width: 100%;
+  }
+  &__btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn{
+    width: 50%;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(275.37deg, #476172 0%, #3094C4 100%);
+    &.current{
+      @extend .btn-with-gradient;
+    }
+    &:first-child{
+      margin-right: 20px;
+    }
+  }
+}

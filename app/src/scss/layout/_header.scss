@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: flex-start;
     max-width: max-content;
+    z-index: 40;
     @include media($md){
       z-index: 51;
     }
@@ -69,6 +70,12 @@
         margin-top: 20px;
       }
     }
+  }
+  &__title{
+    font-size: 18px;
+    line-height: 170%;
+    font-weight: 500;
+    color: #FFFFFF;
   }
   &__button{
     width: 70px;
@@ -160,10 +167,13 @@
       flex-direction: column;
       justify-content: center;
       padding-left: 83px;
-      overflow: hidden;
       @include media($md){
         padding-left: 0;
         align-items: center;
+      }
+      &_2{
+        justify-content: flex-start;
+        padding-top: 130px;
       }
     }
   }
@@ -225,6 +235,7 @@
     z-index: -2;
     width: 100%;
     box-shadow: inset 0px -90px 80px #000000;
+    overflow-y: hidden;
   }
   &__line_1{
     position: absolute;

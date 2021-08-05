@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Authorization | Искусственный интеллект
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    include components/header.pug 
+    +header
+    .auth 
+      .auth__body.container 
+        .intro__lines
+          .intro__line.intro__line_1
+          .intro__line.intro__line_2
+        form.auth__content 
+          .auth__gradient
+          h2.auth__title Вход в личный кабинет
+          .auth__inputs
+            .auth__input-parent(data-value="E-mail: ")
+              input(type="email" required).auth__input.pl-70
+            .auth__input-parent(data-value="Пароль: ")
+              input(type="text" required).auth__input.pl-85
+          .auth__btns 
+            button(type="submit").auth__btn.current Войти
+            a(href="register.html").auth__btn Регистрация
+        img(src="images/auth.svg", alt="auth").auth__img
+    include components/footer.pug 
+    +footer
+    script(src="scripts/index.js")
