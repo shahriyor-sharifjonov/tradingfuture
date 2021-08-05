@@ -74,10 +74,14 @@ $break-point in $sizes {
   }
 }
 
-@for $i from 1 through 100 {
+@for $i from 1 through 110 {
   .pl-#{$i}{
     padding-left: #{$i}px;
   }
+}
+
+.pl-182{
+  padding-left: 182px;
 }
 
 @mixin media($size) {

@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Authorization | Искусственный интеллект
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    include components/header.pug 
+    +header
+    .auth 
+      .auth__body.container 
+        .intro__lines
+          .intro__line.intro__line_1
+          .intro__line.intro__line_2
+        form.auth__content 
+          .auth__gradient
+          h2.auth__title Регистрация в личного кабинета
+          .auth__inputs
+            .auth__input-parent(data-value="Имя: ")
+              input(type="text" required).auth__input.pl-57
+            .auth__input-parent(data-value="Фамилия: ")
+              input(type="text" required).auth__input.pl-105
+          .auth__inputs
+            .auth__input-parent(data-value="E-mail: ")
+              input(type="text" required).auth__input.pl-70
+            .auth__input-parent(data-value="Телефон: ")
+              input(type="text" required).auth__input.pl-97
+          .auth__inputs
+            .auth__input-parent(data-value="Пароль: ")
+              input(type="text" required).auth__input.pl-82
+            .auth__input-parent(data-value="Повторите пароль: ")
+              input(type="text" required).auth__input.pl-182
+          .auth__row 
+            input(type="checkbox", name="chk" id="chk").auth__chk
+            label(for="chk").auth__checkbox
+            label(for="chk").auth__p Вы соглашаетесь с условиями обработки <a href="privacy.html">персональных данных</a>
+          .auth__btns 
+            button(type="submit").auth__btn.current Зарегистрироваться
+            a(href="auth.html").auth__btn Войти в личный кабинет
+        img(src="images/auth.svg", alt="auth").auth__img
+    include components/footer.pug 
+    +footer
+    script(src="scripts/index.js")
