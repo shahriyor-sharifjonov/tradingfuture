@@ -14,7 +14,7 @@ html(lang="en")
         .intro__lines
           .intro__line.intro__line_1
           .intro__line.intro__line_2
-        form.auth__content 
+        form(action="auth.html").auth__content 
           .auth__gradient
           h2.auth__title Регистрация в личного кабинета
           .auth__inputs
@@ -24,7 +24,7 @@ html(lang="en")
               input(type="text" required).auth__input.pl-105
           .auth__inputs
             .auth__input-parent(data-value="E-mail: ")
-              input(type="text" required).auth__input.pl-70
+              input(type="email" required).auth__input.pl-70
             .auth__input-parent(data-value="Телефон: ")
               input(type="text" required).auth__input.pl-97
           .auth__inputs
