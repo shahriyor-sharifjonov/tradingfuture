@@ -88,8 +88,32 @@ $break-point in $sizes {
   margin-bottom: 100px !important;
 }
 
+.mr-0{
+  margin-right: 0 !important;
+}
+.mb-0{
+  margin-bottom: 0px;
+}
+
+
 @mixin media($size) {
   @media (max-width:#{$size}px) {
     @content;
+  }
+}
+
+.md-mb-50{
+  @include media($md){
+    margin-bottom: 50px !important;
+  }
+}
+.md-mb-35{
+  @include media($md){
+    margin-bottom: 35px !important;
+  }
+}
+.md-mt-50{
+  @include media($md){
+    margin-top: 50px !important;
   }
 }

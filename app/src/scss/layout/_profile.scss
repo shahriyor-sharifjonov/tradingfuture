@@ -5,7 +5,12 @@
     width: 100%;
     margin: 0 auto;
   }
-    &__id{
+  &__title{
+    @include media($md){
+      font-size: 24px;  
+    }
+  }
+  &__id{
     font-weight: 500;
     font-size: 20px;
     line-height: 170%;
@@ -30,4 +35,25 @@
       margin-bottom: 20px;
     }
   }
+  &__inputs{
+    flex-direction: column;
+  }
+  &__input{
+    &:first-of-type{
+      @include media($md){
+        margin-bottom: 50px;
+      }
+    }
+    &:not(:last-child){
+      margin-bottom: 50px;
+    }
+    &::before{
+      top: -30px;
+      left: 0;
+    }
+  }
+}
+
+form.profile__content{
+  margin-top: 50px;
 }

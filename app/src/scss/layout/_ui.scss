@@ -211,3 +211,11 @@ ul{
     z-index: -1;
   }
 }
+.icon-arrow-down{
+  transition: 200ms ease;
+}
+.current-link .icon-arrow-down{
+  transform: rotate(180deg);
+  padding-bottom: 0;
+  padding-top: 6px;
+}

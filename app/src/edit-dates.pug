@@ -17,17 +17,20 @@ html(lang="en")
         .startp__gradient
         include components/header.pug 
         +header3
-        h2.update__title.profile__title Изменить пароль
+        h2.update__title.profile__title Изменить личную информацию
         p.profile__id ID:  000088
         form(action="").profile__content 
-          .auth__inputs.profile__inputs
-            .auth__input-parent(data-value="Старый пароль: ").profile__input.mr-0
+          .auth__inputs
+            .auth__input-parent(data-value="Имя:").profile__input.mr-0.mb-0.md-mb-50
               input(type="text" required).auth__input.pl-10
-            .auth__input-parent(data-value="Новый пароль: ").profile__input
+            .auth__input-parent(data-value="Фамилия:").profile__input.md-mb-35
               input(type="text" required).auth__input.pl-10
-            .auth__input-parent(data-value="Повторите новый пароль: ").profile__input
+          .auth__inputs
+            .auth__input-parent(data-value="E-mail:").profile__input.mb-0.md-mb-50
+              input(type="email" required).auth__input.pl-10
+            .auth__input-parent(data-value="Телефон:").profile__input.md-mb-50
               input(type="text" required).auth__input.pl-10
           .auth__btns.profile__btns
-            button(type="submit").auth__btn.profile__btn.current Изменить пароль
+            button(type="submit").auth__btn.profile__btn.current Изменить личную информацию
             a(href="dates.html").auth__btn.profile__btn Вернуться к личным данным
     script(src="scripts/index.js")
