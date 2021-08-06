@@ -351,6 +351,9 @@
     width: 100%;
     &-parent{
       max-width: 392px;
+      @include media($lg){
+        margin-bottom: 30px;
+      }
     }
   }
   &__btn{
@@ -380,6 +383,10 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    @include media($lg){
+      flex-direction: column;
+      align-items: center;
+    }
     &-p{
       font-size: 14px;
       line-height: 170%;
@@ -426,6 +433,12 @@
   &__left{
     max-width: 50%;
     width: 100%;
+    @include media($lg){
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__right{
     max-width: 50%;
@@ -433,8 +446,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include media($lg){
+      margin-top: 50px;
+      max-width: 100%;
+    }
   }
 
+}
+
+.range__value{
+  font-size: 14px;
+  line-height: 170%;
+  color: #FFFFFF;
+  @include media($md){
+    margin-top: 20px;
+  }
+}
+
+.range__p{
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .bot__range {
@@ -446,6 +477,11 @@
   margin-bottom: 30px;
   max-width: 392px;
   opacity: 1;
+  @include media($md){
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 #demo{
