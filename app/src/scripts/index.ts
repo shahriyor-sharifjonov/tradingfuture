@@ -90,3 +90,27 @@ function dropdown2(el, th){
 function dropOpen(el){
   el.classList.toggle('open');
 }
+
+if(document.querySelector('.bot__row')){
+  let slider = document.getElementById("range");
+  let range2 = document.getElementById("range2");
+  let output = document.getElementById("demo");
+  let demo2 = document.getElementById("demo2");
+  demo2.innerHTML = `Минимум`
+  range2.oninput = function() {
+    if(range2.value == 1){
+      demo2.innerHTML = `Минимум`
+    }
+    if(range2.value == 2){
+      demo2.innerHTML = `Средний`
+    }
+    if(range2.value == 3){
+      demo2.innerHTML = `Максимальный`
+    }
+  }
+  output.innerHTML = slider.value + ' грн'; 
+
+  slider.oninput = function() {
+    output.innerHTML = this.value + ' грн';
+  }
+}

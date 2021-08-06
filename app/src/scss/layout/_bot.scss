@@ -347,6 +347,12 @@
       }
     }
   }
+  &__input2{ 
+    width: 100%;
+    &-parent{
+      max-width: 392px;
+    }
+  }
   &__btn{
     margin-top: 50px;
     @extend .btn-with-gradient;
@@ -428,6 +434,56 @@
     flex-direction: column;
     align-items: center;
   }
+
+}
+
+.bot__range {
+  width: 100%; /* Width of the outside container */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  max-width: 392px;
+  opacity: 1;
+}
+
+#demo{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  color: #FFFFFF;
+}
+
+/* The slider itself */
+.bot__range-item {
+  appearance: none;
+  max-width: 226px;
+  width: 100%;
+  height: 2px;
+  background: #50b3c475;
+  opacity: 0.5;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+
+.bot__range-item::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #50B3C4;
+  filter: blur(2px);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bot__range-item::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
 }
 
 @keyframes succes-item_1 {
