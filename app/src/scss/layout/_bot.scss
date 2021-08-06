@@ -137,7 +137,8 @@
         right: 20px;
       }
       &_2{
-        right: 60px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
         animation: 1s pulse infinite;
       }
       &_3{
@@ -162,14 +163,15 @@
       transform: translateY(-50%);
       border-radius: 50%;
       &_1{
-        left: 20px;
+        left: 60px;
         animation: 1s left-to-center infinite;
       }
       &_2{
-        left: 60px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
       }
       &_3{
-        left: 100px;
+        right: 60px;
         animation: 1s right-to-center infinite;
       }
     }
@@ -225,23 +227,23 @@
 }
 @keyframes left-to-center {
   0%{
-    left: 20px;
+    left: 60px;
   }
   50%{
-    left: 30px;
+    left: 70px;
   }
   100%{
-    left: 20px;
+    left: 60px;
   }
 }
 @keyframes right-to-center {
   0%{
-    left: 100px;
+    right: 60px;
   }
   50%{
-    left: 90px;
+    right: 70px;
   }
   100%{
-    left: 100px;
+    right: 60px;
   }
 }
