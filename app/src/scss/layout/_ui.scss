@@ -224,6 +224,7 @@ ul{
   max-width: 100%;
   width: 100%;
   &__button{
+    max-width: 100%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -231,12 +232,21 @@ ul{
     font-weight: 500;
     font-size: 18px;
     line-height: 170%;
+    text-align: left;
     color: #FFFFFF;
+    @include media($md){
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 16px;
+      width: max-content;
+    }
     &:not(:last-child){
       margin-bottom: 20px;
     }
     svg{
       margin-left: 20px;
+      min-width: 19px;
+      min-height: 15px;
     }
     &.show{
       & svg{
