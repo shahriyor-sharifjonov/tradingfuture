@@ -114,3 +114,7 @@ if(document.querySelector('.bot__row')){
     output.innerHTML = this.value + ' грн';
   }
 }
+
+function mydropdown(el){
+  el.classList.toggle('show');
+}

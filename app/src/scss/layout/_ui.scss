@@ -220,3 +220,38 @@ ul{
   padding-top: 6px;
 }
 
+.mydropdown{
+  max-width: 100%;
+  width: 100%;
+  &__button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 170%;
+    color: #FFFFFF;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+    svg{
+      margin-left: 20px;
+    }
+    &.show{
+      & svg{
+        transform: rotate(180deg);
+      }
+      & ~ .mydropdown__content{
+        display: flex;
+      }
+    }
+  }
+  &__p{
+    font-size: 14px;
+    font-weight: 300;
+  }
+  &__content{
+    display: none;
+  }
+}
