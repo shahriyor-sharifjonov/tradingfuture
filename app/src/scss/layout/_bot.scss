@@ -1,10 +1,16 @@
 .bot{
+  &__body{
+    margin-bottom: 100px;
+  }
   &__title{
     font-weight: 600;
     font-size: 30px;
     line-height: 168.9%;
     color: #FFFFFF;
     margin-bottom: 50px;
+    @include media($md){
+      text-align: center;
+    }
   }
   &__header{
     &-list{
@@ -13,6 +19,12 @@
       justify-content: flex-start;
       &.show-on-mobile{
         display: none;
+        @include media($lg){
+          display: flex;
+        }
+      }
+      @include media($lg){
+        flex-wrap: wrap;
       }
     }
     &-item{
@@ -23,24 +35,57 @@
       align-items: center;
       justify-content: center;
       background: linear-gradient(275.43deg, rgba(71, 97, 114, 0.6) 27.24%, rgba(48, 148, 196, 0.6) 145.95%);
+      &:nth-child(2){
+        @include media($lg){
+          max-width: 50%;
+          width: 100%;
+        }
+      }
+      &:nth-child(3){
+        @include media($lg){
+          max-width: 100%;
+          width: 100%;
+          margin-bottom: 100px;
+        }
+      }
+      &:not(:first-child){
+        @include media($lg){
+          margin-right: 0px !important;
+        }
+      }
       &:not(:last-child){
         margin-right: 20px;
       }
       &.small{
         max-width: 186px;
+        @include media($lg){
+          max-width: calc(50% - 20px);
+          width: 100%;
+        }
       }
       &.nonbg{
         background: none;
+        @include media($lg){
+          display: none;
+        }
+      }
+      @include media($lg){
+        margin-bottom: 60px;
       }
     }
   }
   &__list{
     display: flex;
+    position: relative;
     width: 100%;
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 15px;
     transition: 200ms ease;
+    @include media($lg){
+      flex-wrap: wrap;
+      height: 0;
+    }
   }
   &__item{
     max-width: 323px;
@@ -50,11 +95,58 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    &:nth-child(1){
+      @include media($lg){
+        position: absolute;
+        top: -213px;
+        left: 0;
+      }
+    }
+    &:nth-child(2){
+      @include media($lg){
+        position: absolute;
+        top: -213px;
+        right: 0;
+        max-width: 50%;
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+    &:nth-child(3){
+      @include media($lg){
+        max-width: 100%;
+        width: 100%;
+        position: absolute;
+        top: -100px;
+      }
+    }
+    &:nth-child(4){
+      @include media($lg){
+        max-width: 100%;
+        width: 100%;
+        position: absolute;
+        top: -55px;
+      }
+    }
     &:not(:last-child){
       margin-right: 20px;
     }
     &.small{
       max-width: 186px;
+      @include media($lg){
+        max-width: calc(50% - 20px);
+        width: 100%;
+      }
+    }
+    &-title{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 168.9%;
+      color: #fff;
+      @include media($lg){
+        font-size: 12px;
+        line-height: 168.9%;
+      }
     }
     &-p{
       font-size: 14px;
@@ -65,6 +157,8 @@
     &-drop{
       &__btn{
         max-width: 100%;
+        box-shadow: 0px 3px 5px 0px #00000033;
+        z-index: 2;
         width: 100%;
         height: 28px;
         padding-left: 20px;
@@ -116,12 +210,15 @@
         transition: none;
         max-width: 323px;
         width: 100%;
+        @include media($lg){
+          max-width: 100%;
+        }
         &-item{
           display: flex;
           justify-content: center;
           align-items: center;
           padding: 5px 0;
-          background: linear-gradient(275.37deg, rgba(71, 97, 114, 0.5) 0%, rgba(48, 148, 196, 0.5) 100%);
+          background: linear-gradient(275.37deg, rgba(71, 97, 114, 1) 0%, rgba(48, 148, 196, 1) 100%);
           width: 100%;
           font-weight: 400;
           font-size: 10px;
@@ -224,6 +321,112 @@
         animation: 1s right-to-center infinite;
       }
     }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  &__inputs{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include media($md){
+      flex-direction: column;
+    }
+  }
+  &__input{
+    max-width: 50%;
+    width: 100%;
+    &_first{
+      @include media($md){
+        order: 1;
+        margin-top: 20px;
+      }
+    }
+  }
+  &__btn{
+    margin-top: 50px;
+    @extend .btn-with-gradient;
+    padding: 15px 0;
+    width: 289px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.tac{
+      margin: 50px auto;
+    }
+  }
+  &__link{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 170%;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    margin-top: 10px;
+  }
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    &-p{
+      font-size: 14px;
+      line-height: 170%;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    &-price{
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 170%;
+      color: #FFFFFF;
+      margin-bottom: 25px;
+    }
+    &-red{
+      max-width: 226px;
+      width: 100%;
+      background: #AC0000;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 0;
+    }
+    &-yellow{
+      max-width: 226px;
+      width: 100%;
+      background: #B85800;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 0;
+    }
+    &-green{
+      max-width: 226px;
+      width: 100%;
+      background: #039E00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 0;
+    }
+  }
+  &__left{
+    max-width: 50%;
+    width: 100%;
+  }
+  &__right{
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

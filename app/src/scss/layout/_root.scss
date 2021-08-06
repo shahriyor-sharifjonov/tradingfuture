@@ -74,9 +74,9 @@ $break-point in $sizes {
   }
 }
 
-@for $i from 1 through 110 {
+@for $i from 1 through 152 {
   .pl-#{$i}{
-    padding-left: #{$i}px;
+    padding-left: #{$i}px !important;
   }
 }
 
@@ -92,7 +92,7 @@ $break-point in $sizes {
   margin-right: 0 !important;
 }
 .mb-0{
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 

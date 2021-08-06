@@ -50,7 +50,7 @@ a{
   text-decoration: none;
   color: #fff;
 }
-input{
+input:not([type="range"]){
   background: #000;
   box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.55);
   border: none;

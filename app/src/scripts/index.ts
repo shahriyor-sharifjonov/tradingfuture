@@ -53,7 +53,7 @@ if (window.location.href.indexOf("bots.html") != -1){
   for(let i = 0; i < headerLink.length; i++){
     headerLink[i].classList.remove('current-link');
     if(headerLink[i].innerHTML.indexOf("Бот") !== -1){
-      dropdown2(document.getElementsByClassName('dropdown__content_2')[0],document.getElementsByClassName('dropdown__button_2')[0]);
+      // dropdown2(document.getElementsByClassName('dropdown__content_2')[0],document.getElementsByClassName('dropdown__button_2')[0]);
     }else if(headerLink[i].innerHTML.indexOf("Список ботов") !== -1){
       headerLink[i].classList.add('current-link');
     }
@@ -63,7 +63,7 @@ if (window.location.href.indexOf("new-bot.html") != -1){
   for(let i = 0; i < headerLink.length; i++){
     headerLink[i].classList.remove('current-link');
     if(headerLink[i].innerHTML.indexOf("Бот") !== -1){
-      dropdown2(document.getElementsByClassName('dropdown__content_2')[0],document.getElementsByClassName('dropdown__button_2')[0]);
+      // dropdown2(document.getElementsByClassName('dropdown__content_2')[0],document.getElementsByClassName('dropdown__button_2')[0]);
     }else if(headerLink[i].innerHTML.indexOf("Добавить бота") !== -1){
       headerLink[i].classList.add('current-link');
     }

@@ -26,7 +26,7 @@ mixin contacts()
               .contacts__input-parent(data-value="Имя: ")
                 input(type="text").contacts__input.pl-sm
               .contacts__input-parent(data-value="E-mail: ").ml20
-                input(type="text" value="Ваш вопрос:").contacts__input
+                input(type="email").contacts__input.pl-70
             .contacts__input-parent(data-value="Ваш вопрос: ").mt20
               textarea(name="", cols="30", rows="10").contacts__textarea
             button(type="submit").contacts__btn Отправить

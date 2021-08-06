@@ -9,8 +9,8 @@ html(lang="en")
   body 
     include components/header.pug 
     +header2
-    .startp.update
-      .startp__body.update__body.container 
+    .startp.update.bot
+      .startp__body.update__body.container.bot__body
         .intro__lines
           .intro__line.intro__line_1
           .intro__line.intro__line_2
@@ -42,7 +42,7 @@ html(lang="en")
             .bot__item-drop__content  
               a(href="#!").bot__item-drop__content-item Включить
               a(href="#!").bot__item-drop__content-item Выключить 
-              a(href="#!").bot__item-drop__content-item Настроить 
+              a(href="settings.html").bot__item-drop__content-item Настроить 
               a(href="#!").bot__item-drop__content-item Удалить 
         .bot__header-list.show-on-mobile
           .bot__header-item.small
@@ -66,7 +66,7 @@ html(lang="en")
             .bot__item-drop__content  
               a(href="#!").bot__item-drop__content-item Включить
               a(href="#!").bot__item-drop__content-item Выключить 
-              a(href="#!").bot__item-drop__content-item Настроить 
+              a(href="settings.html").bot__item-drop__content-item Настроить 
               a(href="#!").bot__item-drop__content-item Удалить 
         .bot__header-list.show-on-mobile
           .bot__header-item.small
@@ -79,9 +79,9 @@ html(lang="en")
             h3.bot__item-title
         .bot__list 
           .bot__item.small
-            h4.bot__item-p 2
+            h4.bot__item-p 3
           .bot__item 
-            h4.bot__item-p MyBot 2
+            h4.bot__item-p MyBot 3
           .bot__item 
             .bot__disabled-bar
               .bot__disabled-bar-item.bot__disabled-bar-item_1
@@ -92,7 +92,7 @@ html(lang="en")
             .bot__item-drop__content  
               a(href="#!").bot__item-drop__content-item Включить
               a(href="#!").bot__item-drop__content-item Выключить 
-              a(href="#!").bot__item-drop__content-item Настроить 
+              a(href="settings.html").bot__item-drop__content-item Настроить 
               a(href="#!").bot__item-drop__content-item Удалить 
         
     script(src="scripts/index.js")

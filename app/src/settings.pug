@@ -17,15 +17,21 @@ html(lang="en")
         .startp__gradient
         include components/header.pug 
         +header3
-        h2.bot__title Добавить бота
-        form(action="").bot__form
-          .bot__inputs
-            .auth__input-parent(data-value="Ваш ApiKey:").bot__input_first
-              input(type="text").auth__input.pl-120
-              a(href="#!").bot__link Как получить ApiKey?
-            .auth__input-parent(data-value="Название бота:")
+        .bot__row
+          .bot__left 
+            h2.bot__title Настройка бота
+            .auth__input-parent(data-value="Сумма сделки: ")
               input(type="text").auth__input.pl-152
-          button(type="submit").bot__btn Продолжить
-          
-        
+            input(type="range" step="3")
+          .bot__right
+            h2.bot__title Аналитика
+            p.bot__row-p Средний % / день
+            p.bot__row-price 20%
+            p.bot__row-p Средняя сумма / день
+            p.bot__row-price 70$
+            p.bot__row-p Скорость
+            p.bot__row-red Медленная
+            p.bot__row-yellow Обычная
+            p.bot__row-green Максимальная
+        a(href="#!").bot__btn.tac Применить
     script(src="scripts/index.js")
