@@ -38,7 +38,12 @@ html(lang="en")
               .bot__success-bar-item.bot__success-bar-item_2
               .bot__success-bar-item.bot__success-bar-item_3
           .bot__item 
-            h4.bot__item-drop__btn Действия <span class="icon-arrow-down"></span>
+            h4.bot__item-drop__btn(onclick="dropOpen(this)") Действия <span class="icon-arrow-down"></span>
+            .bot__item-drop__content  
+              a(href="#!").bot__item-drop__content-item Включить
+              a(href="#!").bot__item-drop__content-item Выключить 
+              a(href="#!").bot__item-drop__content-item Настроить 
+              a(href="#!").bot__item-drop__content-item Удалить 
         .bot__header-list.show-on-mobile
           .bot__header-item.small
             h3.bot__item-title #
@@ -57,7 +62,12 @@ html(lang="en")
             .bot__error-bar
               .bot__error-bar-item.bot__error-bar-item_2
           .bot__item 
-            h4.bot__item-drop__btn Действия <span class="icon-arrow-down"></span>
+            h4.bot__item-drop__btn(onclick="dropOpen(this)") Действия <span class="icon-arrow-down"></span>
+            .bot__item-drop__content  
+              a(href="#!").bot__item-drop__content-item Включить
+              a(href="#!").bot__item-drop__content-item Выключить 
+              a(href="#!").bot__item-drop__content-item Настроить 
+              a(href="#!").bot__item-drop__content-item Удалить 
         .bot__header-list.show-on-mobile
           .bot__header-item.small
             h3.bot__item-title #
@@ -78,6 +88,11 @@ html(lang="en")
               .bot__disabled-bar-item.bot__disabled-bar-item_2
               .bot__disabled-bar-item.bot__disabled-bar-item_3
           .bot__item 
-            h4.bot__item-drop__btn Действия <span class="icon-arrow-down"></span>
+            h4.bot__item-drop__btn(onclick="dropOpen(this)") Действия <span class="icon-arrow-down"></span>
+            .bot__item-drop__content  
+              a(href="#!").bot__item-drop__content-item Включить
+              a(href="#!").bot__item-drop__content-item Выключить 
+              a(href="#!").bot__item-drop__content-item Настроить 
+              a(href="#!").bot__item-drop__content-item Удалить 
         
     script(src="scripts/index.js")

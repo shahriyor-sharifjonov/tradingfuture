@@ -86,3 +86,7 @@ function dropdown2(el, th){
     drop2open = false;
   }
 }
+
+function dropOpen(el){
+  el.classList.toggle('open');
+}
