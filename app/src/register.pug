@@ -4,7 +4,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Authorization | Искусственный интеллект
+    title Registration | Искусственный интеллект
     link(rel="stylesheet", href="styles/index.css")
   body 
     include components/header.pug 
@@ -33,7 +33,7 @@ html(lang="en")
             .auth__input-parent(data-value="Повторите пароль: ")
               input(type="text" required).auth__input.pl-182
           .auth__row 
-            input(type="checkbox", name="chk" id="chk").auth__chk
+            input(type="checkbox", name="chk" id="chk" required).auth__chk
             label(for="chk").auth__checkbox
             label(for="chk").auth__p Вы соглашаетесь с условиями обработки <a href="privacy.html">персональных данных</a>
           .auth__btns 

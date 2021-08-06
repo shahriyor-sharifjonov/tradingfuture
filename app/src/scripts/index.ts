@@ -18,3 +18,35 @@ window.onclick = (e: MouseEvent) => {
   )
     menuToggle();
 };
+
+
+let drop1open = false;
+function dropdown1(el, th){
+  th.classList.toggle('current-link');
+  if(drop1open == false){
+    el.style.opacity = '1';
+    el.style.visibility = "visible";
+    el.style.transform = "translateY(0)";
+    drop1open = true;
+  }else{
+    el.style.opacity = '0';
+    el.style.visibility = "hidden";
+    el.style.transform = "translateY(-100%)";
+    drop1open = false;
+  }
+}
+let drop2open = false;
+function dropdown2(el, th){
+  th.classList.toggle('current-link');
+  if(drop2open == false){
+    el.style.opacity = '2';
+    el.style.visibility = "visible";
+    el.style.transform = "translateY(0)";
+    drop2open = true;
+  }else{
+    el.style.opacity = '0';
+    el.style.visibility = "hidden";
+    el.style.transform = "translateY(-100%)";
+    drop2open = false;
+  }
+}

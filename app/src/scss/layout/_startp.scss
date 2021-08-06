@@ -1,0 +1,86 @@
+.startp{
+  box-shadow: inset 0px -90px 80px #000000, inset 150px 70px 80px #000000;
+  margin-top: -134px;
+  overflow: hidden;
+  min-height: 105vh;
+  @include media($md){
+    box-shadow: none;
+  }
+  &__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    padding-top: 134px;
+    @include media($xl){
+      padding-top: 184px;
+    }
+    @include media(992){
+      flex-direction: column !important;
+    }
+  }
+  &__gradient{
+    @include gradient(300px);
+    position: absolute;
+    z-index: -3;
+    left: 25%;
+    transform: translateX(-50%);
+  }
+  &__title{
+    font-size: 30px;
+    line-height: 168.9%;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 25px;
+    @include media($md){
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+  &__subtitle{
+    font-size: 22px;
+    line-height: 170%;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: 50px;
+    @include media($md){
+      font-size: 14px;
+      line-height: 170%;
+      margin-bottom: 35px;
+    }
+  }
+  &__btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media($md){
+      flex-direction: column;
+    }
+  }
+  &__btn{
+    width: 289px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(275.37deg, #476172 0%, #3094C4 100%);
+    padding: 16px 0;
+    @include media($md){
+      font-size: 14px;
+      line-height: 168.9%;
+    }
+    &.current{
+      margin-right: 20px;
+      @extend .btn-with-gradient;
+      @include media($md){
+        margin-right: 0; 
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

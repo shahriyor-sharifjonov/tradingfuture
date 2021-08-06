@@ -54,11 +54,14 @@ mixin header2()
         h3.header__title Меню личного кабинета
         ul.header__list 
           li.header__li 
-            a(href="#!").header__link.current-link Главная
+            a(href="index.html").header__link.current-link Главная
           li.header__li 
-            a(href="#!").header__link Личные данные
+            a(href="dates.html").header__link Личные данные
           li.header__li 
-            a(href="#!").header__link.dropdown__button Бот <span class="icon-arrow-down"><span>   
+            a(href="#!" onclick="dropdown1(drop1, this)").dropdown__button.dropdown__button_1.header__link Бот <span class="icon-arrow-down"><span>   
+            .dropdown__content.dropdown__content_1#drop1
+              a(href="bots.html").dropdown__item.header__link Список ботов 
+              a(href="new-bot.html").dropdown__item.header__link Добавить бота
         button(type="button").header__lang.header__lang_secondary
           img(src="images/eng.webp", alt="eng").header__lang-img 
           p.header__lang-p eng
@@ -66,3 +69,17 @@ mixin header2()
         .header__lines
           .header__line.header__line_1
           .header__line.header__line_2
+
+mixin header3()
+  .header3 
+    .header3__body
+      .header3__left 
+        a(href="index.html").header__link.header3__link.current-link Главная
+        a(href="#!").header__link.header3__link Личные данные
+        .drop
+          a(href="#!" onclick="dropdown2(drop2, this)").dropdown__button.dropdown__button_2.header__link.header3__link Бот <span class="icon-arrow-down"><span>   
+          .dropdown__content.dropdown__content_2#drop2
+            a(href="bots.html").dropdown2__item.header__link.header3__link Список ботов 
+            a(href="new-bot.html").dropdown2__item.header__link.header3__link Добавить бота
+      a(href="index.html").header3__btn Выйти из личного кабинета 
+      

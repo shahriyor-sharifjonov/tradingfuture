@@ -1,0 +1,63 @@
+.update{
+  &__body{
+    align-items: flex-start;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 170%;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    @include media($sm){
+      text-align: center;
+      width: 100%;
+    }
+  }
+  &__item{
+    display: flex;
+    align-items: flex-start;
+    @include media($lg){
+      flex-direction: column;
+    }
+    @include media($sm){
+      align-items: center;
+    }
+    &-date{
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 170%;
+      color: #FFFFFF;
+      margin-bottom: 5px;
+    }
+    &-title{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 170%;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    &-p{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 225.5%;
+      color: #FFFFFF;
+      opacity: 0.9;
+      max-width: 700px;
+      @include media($md){
+        font-size: 12px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+  &__img{
+    margin-right: 25px;
+    max-width: 300px;
+    width: 100%;
+    @include media($lg){
+      margin-right: 0;
+      margin-bottom: 35px;
+    }
+  }
+}
