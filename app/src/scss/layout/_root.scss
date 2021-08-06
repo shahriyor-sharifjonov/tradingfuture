@@ -84,6 +84,10 @@ $break-point in $sizes {
   padding-left: 182px;
 }
 
+.mb-100{
+  margin-bottom: 100px !important;
+}
+
 @mixin media($size) {
   @media (max-width:#{$size}px) {
     @content;

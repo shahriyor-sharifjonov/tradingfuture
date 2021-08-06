@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Authorization | Искусственный интеллект
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    include components/header.pug 
+    +header2
+    .startp.fam#main
+      .startp__body.fam__body.container 
+        .intro__lines
+          .intro__line.intro__line_1
+          .intro__line.intro__line_2
+        .startp__gradient
+        include components/header.pug 
+        +header3
+        h2.fam__title Добро пожаловать в нашу Tradingfuture.io»
+        h3.fam__subtitle Мы подготовили для вас видео-материал
+        a(href="#popup").video
+          img(src="images/thumbnail.webp", alt="thumbnail").video__img
+        h2.fam__title.mb-100 Инструкция
+        
+    .popup#popup 
+      .popup__body
+        video(src="videos/video.webm" controls type="video/webM").popup__video Your browser does not support the video tag.
+      a(href="#main").popup__close 
+    script(src="scripts/index.js")
