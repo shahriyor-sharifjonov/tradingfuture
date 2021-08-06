@@ -1,0 +1,85 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Personal dates | Искусственный интеллект
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    include components/header.pug 
+    +header2
+    .startp.update
+      .startp__body.update__body.container 
+        .intro__lines
+          .intro__line.intro__line_1
+          .intro__line.intro__line_2
+        .startp__gradient
+        include components/header.pug 
+        +header3
+        h2.bot__title Список ботов
+        .bot__header-list
+          .bot__header-item.small
+            h3.bot__item-title #
+          .bot__header-item
+            h3.bot__item-title Имя бота
+          .bot__header-item
+            h3.bot__item-title Стататус
+          .bot__header-item.nonbg
+            h3.bot__item-title
+        .bot__list 
+          .bot__item.small
+            h4.bot__item-p 1
+          .bot__item 
+            h4.bot__item-p MyBot
+          .bot__item 
+            .bot__success-bar
+              .bot__success-bar-item.bot__success-bar-item_1
+              .bot__success-bar-item.bot__success-bar-item_2
+              .bot__success-bar-item.bot__success-bar-item_3
+          .bot__item 
+            h4.bot__item-drop__btn Действия <span class="icon-arrow-down"></span>
+        .bot__header-list.show-on-mobile
+          .bot__header-item.small
+            h3.bot__item-title #
+          .bot__header-item
+            h3.bot__item-title Имя бота
+          .bot__header-item
+            h3.bot__item-title Стататус
+          .bot__header-item.nonbg
+            h3.bot__item-title
+        .bot__list 
+          .bot__item.small
+            h4.bot__item-p 2
+          .bot__item 
+            h4.bot__item-p MyBot 2
+          .bot__item 
+            .bot__error-bar
+              .bot__error-bar-item.bot__error-bar-item_1
+              .bot__error-bar-item.bot__error-bar-item_2
+              .bot__error-bar-item.bot__error-bar-item_3
+          .bot__item 
+            h4.bot__item-drop__btn Действия <span class="icon-arrow-down"></span>
+        .bot__header-list.show-on-mobile
+          .bot__header-item.small
+            h3.bot__item-title #
+          .bot__header-item
+            h3.bot__item-title Имя бота
+          .bot__header-item
+            h3.bot__item-title Стататус
+          .bot__header-item.nonbg
+            h3.bot__item-title
+        .bot__list 
+          .bot__item.small
+            h4.bot__item-p 2
+          .bot__item 
+            h4.bot__item-p MyBot 2
+          .bot__item 
+            .bot__disabled-bar
+              .bot__disabled-bar-item.bot__disabled-bar-item_1
+              .bot__disabled-bar-item.bot__disabled-bar-item_2
+              .bot__disabled-bar-item.bot__disabled-bar-item_3
+          .bot__item 
+            h4.bot__item-drop__btn Действия <span class="icon-arrow-down"></span>
+        
+    script(src="scripts/index.js")

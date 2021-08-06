@@ -1,0 +1,247 @@
+.bot{
+  &__title{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 168.9%;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+  }
+  &__header{
+    &-list{
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      &.show-on-mobile{
+        display: none;
+      }
+    }
+    &-item{
+      max-width: 323px;
+      width: 100%;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(275.43deg, rgba(71, 97, 114, 0.6) 27.24%, rgba(48, 148, 196, 0.6) 145.95%);
+      &:not(:last-child){
+        margin-right: 20px;
+      }
+      &.small{
+        max-width: 186px;
+      }
+      &.nonbg{
+        background: none;
+      }
+    }
+  }
+  &__list{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+  &__item{
+    max-width: 323px;
+    width: 100%;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:not(:last-child){
+      margin-right: 20px;
+    }
+    &.small{
+      max-width: 186px;
+    }
+    &-p{
+      font-size: 14px;
+      line-height: 168.9%;
+      font-weight: 400;
+      color: #FFFFFF;
+    }
+    &-drop{
+      &__btn{
+        max-width: 100%;
+        width: 100%;
+        height: 28px;
+        padding-left: 20px;
+        font-size: 10px;
+        line-height: 168.9%;
+        font-weight: 400;
+        color: #FFFFFF;
+        @extend .btn-with-gradient;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        .icon-arrow-down{
+          position: relative;
+          font-size: 8px;
+          &::before{
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+  &__success-bar{
+    position: relative;
+    width: 226px;
+    height: 2px;
+    background: #000;
+    background: #50B3C4;
+    opacity: 0.5;
+    &-item{
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      background: #50B3C4;
+      filter: blur(3px);
+      transform: translateY(-50%);
+      border-radius: 50%;
+      &_1{
+        left: 20px;
+        animation: 4s succes-item_1 infinite;
+      }
+      &_2{
+        left: 60px;
+        animation: 4s succes-item_2 infinite;
+      }
+      &_3{
+        left: 100px;
+        animation: 4s succes-item_3 infinite;
+      }
+    }
+  }
+  &__error-bar{
+    position: relative;
+    width: 226px;
+    height: 2px;
+    background: #000;
+    background: #FF0000;
+    opacity: 0.5;
+    &-item{
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      background: #FF0000;
+      filter: blur(3px);
+      transform: translateY(-50%);
+      border-radius: 50%;
+      &_1{
+        right: 20px;
+      }
+      &_2{
+        right: 60px;
+        animation: 1s pulse infinite;
+      }
+      &_3{
+        right: 100px;
+      }
+    }
+  }
+  &__disabled-bar{
+    position: relative;
+    width: 226px;
+    height: 2px;
+    background: #000;
+    background: #7C7C7C;
+    opacity: 0.5;
+    &-item{
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      background: #7C7C7C;
+      filter: blur(3px);
+      transform: translateY(-50%);
+      border-radius: 50%;
+      &_1{
+        left: 20px;
+        animation: 1s left-to-center infinite;
+      }
+      &_2{
+        left: 60px;
+      }
+      &_3{
+        left: 100px;
+        animation: 1s right-to-center infinite;
+      }
+    }
+  }
+}
+
+@keyframes succes-item_1 {
+  0%{
+    left: 20px;
+  }
+  50%{
+    left: 100px;
+  }
+  100%{
+    left: 20px;
+  }
+}
+@keyframes succes-item_2 {
+  0%{
+    left: 60px;
+  }
+  50%{
+    left: 140px;
+  }
+  100%{
+    left: 60px;
+  }
+}
+@keyframes succes-item_3 {
+  0%{
+    left: 100px;
+  }
+  50%{
+    left: 180px;
+  }
+  100%{
+    left: 100px;
+  }
+}
+@keyframes pulse {
+  0%{
+    opacity: 1;
+    filter: blur(3px);
+  }
+  50%{
+    opacity: 0.6;
+    filter: blur(6px);
+  }
+  100%{
+    opacity: 1;
+    filter: blur(3px);
+  }
+}
+@keyframes left-to-center {
+  0%{
+    left: 20px;
+  }
+  50%{
+    left: 30px;
+  }
+  100%{
+    left: 20px;
+  }
+}
+@keyframes right-to-center {
+  0%{
+    left: 100px;
+  }
+  50%{
+    left: 90px;
+  }
+  100%{
+    left: 100px;
+  }
+}
