@@ -1,0 +1,33 @@
+.profile{
+  &__content{
+    padding-bottom: 50px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+    &__id{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 170%;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+  }
+  &__p{
+    font-size: 14px;
+    line-height: 170%;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+  }
+  &__btns{
+    flex-direction: column;
+    align-items: center;
+  }
+  &__btn{
+    margin-right: 0 !important;
+    max-width: 400px;
+    width: 100%;
+    &:first-of-type{
+      margin-bottom: 20px;
+    }
+  }
+}

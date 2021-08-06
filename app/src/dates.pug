@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Personal dates | Искусственный интеллект
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    include components/header.pug 
+    +header2
+    .startp.update
+      .startp__body.update__body.container 
+        .intro__lines
+          .intro__line.intro__line_1
+          .intro__line.intro__line_2
+        .startp__gradient
+        include components/header.pug 
+        +header3
+        h2.update__title Личные данные
+        p.profile__id ID:  000088
+        p.profile__p iP: 99999; последняя активность в 22:00 г. Днепр, Днепропетровская область, Украина 
+        .profile__content 
+          .auth__inputs
+            .auth__input-parent(data-value="Имя: ")
+              input(type="text" required value="Владислав" disabled).auth__input.pl-57
+            .auth__input-parent(data-value="Фамилия: ")
+              input(type="text" required value="Жуков" disabled).auth__input.pl-105
+          .auth__inputs
+            .auth__input-parent(data-value="E-mail: ")
+              input(type="email" required value="Владислав@gmail.com" disabled).auth__input.pl-70
+            .auth__input-parent(data-value="Телефон: ")
+              input(type="text" required value="+38 099 999 99 99" disabled).auth__input.pl-97
+          .auth__inputs
+            .auth__input-parent(data-value="Логин: ")
+              input(type="text" required value="888 888" disabled).auth__input.pl-70
+            .auth__input-parent(data-value="Пароль: ")
+              input(type="text" required value="888 888" disabled).auth__input.pl-82
+          .auth__btns.profile__btns
+            a(href="edit-dates.html").auth__btn.profile__btn Изменить личную информацию
+            a(href="edit-password.html").auth__btn.profile__btn Изменить пароль  
+    script(src="scripts/index.js")
