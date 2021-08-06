@@ -40,5 +40,19 @@ html(lang="en")
             p.bot__row-red Медленная
             p.bot__row-yellow Обычная
             p.bot__row-green Максимальная
-        a(href="#!").bot__btn.tac Применить
+        a(href="#incheck").bot__btn.tac Применить
+
+    .modal#error 
+      h2.modal__title.error__title Ошибка!
+      .error__gradient
+      a(href="#main").modal__btn Закрыть  
+    .modal#success 
+      h2.modal__title.success__title Успешно
+      .success__gradient
+      a(href="#main").modal__btn Закрыть  
+    .modal#incheck 
+      h2.modal__title.incheck__title Отправлено на модерацию
+      .incheck__gradient
+      a(href="#main").modal__btn Закрыть  
+
     script(src="scripts/index.js")
