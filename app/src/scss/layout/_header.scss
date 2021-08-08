@@ -287,6 +287,9 @@
   &__link{
     &:not(:last-child){
       margin-right: 50px;
+      @include media(1400){
+        margin-right: 20px;
+      }
     }
   }
   &__btn{
@@ -294,5 +297,6 @@
     border-image-slice: 1;
     border-image-source: linear-gradient(275.37deg, #476172 0%, #3094C4 100%);
     padding: 5px 30px;
+    margin-top: 13px;
   }
 }
