@@ -357,15 +357,27 @@
     }
   }
   &__btn{
-    margin-top: 50px;
-    @extend .btn-with-gradient;
+    &.current{
+      @extend .btn-with-gradient;
+    }
+    &:first-of-type{
+      margin-top: 50px;
+    }
+    &.mb-50{
+      margin-bottom: 50px;
+    }
+    margin-top: 20px;
     padding: 15px 0;
+    border: 2px solid;
+    border-image-source: linear-gradient(275.37deg, #476172 0%, #3094C4 100%);
+    border-image-slice: 1;
     width: 289px;
     display: flex;
     align-items: center;
     justify-content: center;
     &.tac{
-      margin: 50px auto;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   &__link{

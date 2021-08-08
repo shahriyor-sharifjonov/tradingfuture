@@ -41,7 +41,7 @@ function dropdown1(el, th){
 
 const headerLink = document.getElementsByClassName('header__link');
 
-if (window.location.href.indexOf("dates.html") != -1 || window.location.href.indexOf("edit-dates.html") != -1 || window.location.href.indexOf("edit-password.html") != -1 ){
+if (window.location.href.indexOf("dates.html") != -1 || window.location.href.indexOf("edit-dates.html") != -1 || window.location.href.indexOf("edit-password.html") != -1 || window.location.href.indexOf("getrefs.html") != -1 || window.location.href.indexOf("refs.html") != -1){
   for(let i = 0; i < headerLink.length; i++){
     headerLink[i].classList.remove('current-link');
     if(headerLink[i].innerHTML.indexOf("Личные данные") !== -1){
@@ -117,4 +117,12 @@ if(document.querySelector('.bot__row')){
 
 function mydropdown(el){
   el.classList.toggle('show');
+}
+
+function copyLink() {
+  var copyText = document.getElementById("copyInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
 }

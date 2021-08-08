@@ -1,0 +1,76 @@
+.refs{
+  &__row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    max-width: 100%;
+    width: 100%;
+    @include media($md){
+      flex-direction: column;
+    }
+  }
+  &__input{
+    max-width: 515px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 170%;
+    color: #FFFFFF;
+  }
+  &__btn{
+    margin-top: 0;
+    &:first-of-type{
+      margin-top: 0;
+      @include media($md){
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  &__title{
+    margin-top: 80px;
+    font-size: 20px;
+    line-height: 168.9%;
+    color: #FFFFFF;
+    font-weight: 600;
+    @include media($md){
+      font-size: 14px;
+      line-height: 168.9%;
+    }
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    margin-top: 25px;
+  }
+  &__item{
+    background: linear-gradient(275.43deg, rgba(71, 97, 114, 0.6) 27.24%, rgba(48, 148, 196, 0.6) 145.95%);
+    max-width: 323px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 168.9%;
+    color: #FFFFFF;
+    @include media($lg){
+      background: rgba(48, 148, 196, 0.6);
+      font-size: 10px;
+      line-height: 168.9%;
+    }
+    &:not(:first-of-type){
+      margin-left: 20px;
+      @include media($lg){
+        margin-left: 0;
+      }
+    }
+    &.small{
+      max-width: 186px;
+    }
+  }
+}
