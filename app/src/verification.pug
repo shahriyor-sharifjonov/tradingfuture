@@ -31,5 +31,11 @@ html(lang="en")
               a(href="#popup").verification__btn.btn Выполнено 
             .verification__right 
               img(src="gifs/verification.gif", alt="").verification__gif
+        .modal#popup 
+          h2.popup__title.verification__popup-title Вы точно все сделали?
+          .verification__popup-gradient
+          .popup__btns.verification__popup-btns 
+            a(href="#main").popup__btn.verification__popup-btn.current Да, подтверждаю
+            a(href="#main").popup__btn.verification__popup-btn Нет, отменить
 
     script(src="scripts/index.js")
