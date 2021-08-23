@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Personal dates | Искусственный интеллект
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    include components/header.pug 
+    +header2 
+    .startp.update.bot
+      .startp__body.update__body.container.bot__body
+        .intro__lines
+          .intro__line.intro__line_1
+          .intro__line.intro__line_2
+        .startp__gradient
+        include components/header.pug 
+        +header3    
+        .verification 
+          .verification__body
+            .verification__left
+              h2.verification__title Верификация
+              p.verification__subtitle Мы заметили подозрительную активность в вашем аккаунте подтвердите свою личность
+              p.verification__p Для того чтобы активировать аккаунт снова следуйте инструкциям
+              ol.verification__list 
+                li.verification__li 1. Зайти по ссылке <a href="https://binance.com" target="_blank">binance.com</a>
+                li.verification__li 2. Отсканировать qr-cod 
+                li.verification__li 3. Выполнить верификацию по лицу
+              img(src="gifs/verification.gif", alt="").verification__gif.verification__gif_show-on-mobile
+              a(href="#popup").verification__btn.btn Выполнено 
+            .verification__right 
+              img(src="gifs/verification.gif", alt="").verification__gif
+
+    script(src="scripts/index.js")

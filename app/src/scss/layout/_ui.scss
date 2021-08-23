@@ -26,6 +26,9 @@ $gradient: linear-gradient(275.37deg, #476172 0%, #3094C4 100%);
     outline: none;
   }
 }
+img{
+  pointer-events: none;
+}
 html{
   min-height: 100vh;
   max-width: 100%;
