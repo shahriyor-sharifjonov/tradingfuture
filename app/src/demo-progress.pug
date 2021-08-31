@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Демо баланс | Искусственный интеллект
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    include components/header.pug 
+    +header2
+    .startp.update
+      .startp__body.update__body.container 
+        .intro__lines
+          .intro__line.intro__line_1
+          .intro__line.intro__line_2
+        .startp__gradient
+        include components/header.pug 
+        +header3
+        h2.update__title.profile__title.center Осталось времени до зачисления средств на основной баланс 
+        p.profile__balance 20 : 55
+        .progress-bar
+          .progress-bar__track(style="width: 63%")
+            .progress-bar__tool(data-value="63")
+    script(src="scripts/index.js")

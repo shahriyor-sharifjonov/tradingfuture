@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Демо баланс | Искусственный интеллект
+    link(rel="stylesheet", href="styles/index.css")
+  body 
+    include components/header.pug 
+    +header2
+    .startp.update
+      .startp__body.update__body.container 
+        .intro__lines
+          .intro__line.intro__line_1
+          .intro__line.intro__line_2
+        .startp__gradient
+        include components/header.pug 
+        +header3
+        h2.update__title.profile__title Список ордеров
+        .orders
+          .orders__top 
+            p.orders__top-item ID
+            p.orders__top-item Пара
+            p.orders__top-item Цена
+            p.orders__top-item Сумма
+            p.orders__top-item Тип
+          .orders__body 
+            p.orders__body-item.success 13
+            p.orders__body-item.success Doge/usdt
+            p.orders__body-item.success 0.72
+            p.orders__body-item.success 1000
+            p.orders__body-item.success Покупка
+          .orders__body.off-on-mobile 
+            p.orders__body-item.warning 14
+            p.orders__body-item.warning Doge/usdt
+            p.orders__body-item.warning 0.72
+            p.orders__body-item.warning 1000
+            p.orders__body-item.warning Продажа
+          .orders__body.off-on-mobile 
+            p.orders__body-item.success 15
+            p.orders__body-item.success Doge/usdt
+            p.orders__body-item.success 0.72
+            p.orders__body-item.success 1000
+            p.orders__body-item.success Покупка
+          .orders__body.off-on-mobile 
+            p.orders__body-item.warning 16
+            p.orders__body-item.warning Doge/usdt
+            p.orders__body-item.warning 0.72
+            p.orders__body-item.warning 1000
+            p.orders__body-item.warning Продажа
+          .orders__body.off-on-mobile 
+            p.orders__body-item.success 17
+            p.orders__body-item.success Doge/usdt
+            p.orders__body-item.success 0.72
+            p.orders__body-item.success 1000
+            p.orders__body-item.success Покупка
+          .orders__body.off-on-mobile 
+            p.orders__body-item.warning 18
+            p.orders__body-item.warning Doge/usdt
+            p.orders__body-item.warning 0.72
+            p.orders__body-item.warning 1000
+            p.orders__body-item.warning Продажа
+        .orders__pagination 
+          button.orders__pagination-prev 
+            svg(width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M0.262303 10L9.26231 1.69098e-06L11.7373 2.625L5.0998 10L11.7373 17.375L9.2623 20L0.262303 10Z" fill="white")
+          button.orders__pagination-next
+            svg(width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M11.7377 10L2.73769 20L0.262692 17.375L6.90019 10L0.262695 2.625L2.7377 4.32743e-07L11.7377 10Z" fill="white")
+
+        
+    script(src="scripts/index.js")

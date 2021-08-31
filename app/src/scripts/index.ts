@@ -1,3 +1,43 @@
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; } 
+  }));
+} catch(e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+// call this to Enable
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+  window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
 const headerButton: HTMLButtonElement =
   document.querySelector(".header__button");
 const headerMenu: HTMLUListElement = document.querySelector(".header__menu");
@@ -6,7 +46,16 @@ const menuToggle = () => {
   menuOpened = !menuOpened;
   headerButton.classList.toggle("open");
   headerMenu.classList.toggle("open");
+  checkMenu()
 };
+
+function checkMenu(){
+  if(menuOpened == true){
+    disableScroll()
+  }else{
+    enableScroll()
+  }
+}
 
 headerButton.onclick = menuToggle;
 
@@ -61,7 +110,6 @@ if (window.location.href.indexOf("bots.html") != -1){
   for(let i = 0; i < headerLink.length; i++){
     headerLink[i].classList.remove('current-link');
     if(headerLink[i].innerHTML.indexOf("Бот") !== -1){
-      // dropdown2(document.getElementsByClassName('dropdown__content_2')[0],document.getElementsByClassName('dropdown__button_2')[0]);
     }else if(headerLink[i].innerHTML.indexOf("Список ботов") !== -1){
       headerLink[i].classList.add('current-link');
     }
@@ -71,8 +119,55 @@ if (window.location.href.indexOf("new-bot.html") != -1){
   for(let i = 0; i < headerLink.length; i++){
     headerLink[i].classList.remove('current-link');
     if(headerLink[i].innerHTML.indexOf("Бот") !== -1){
-      // dropdown2(document.getElementsByClassName('dropdown__content_2')[0],document.getElementsByClassName('dropdown__button_2')[0]);
     }else if(headerLink[i].innerHTML.indexOf("Добавить бота") !== -1){
+      headerLink[i].classList.add('current-link');
+    }
+  }
+}
+if (window.location.href.indexOf("demo-balance.html") != -1){
+  for(let i = 0; i < headerLink.length; i++){
+    headerLink[i].classList.remove('current-link');
+    if(headerLink[i].innerHTML.indexOf("Демо-баланс") !== -1){
+      headerLink[i].classList.add('current-link');
+    }else if(headerLink[i].innerHTML.indexOf("Демо-баланс") !== -1){
+      headerLink[i].classList.add('current-link');
+    }
+  }
+}
+if (window.location.href.indexOf("demo.html") != -1){
+  for(let i = 0; i < headerLink.length; i++){
+    headerLink[i].classList.remove('current-link');
+    if(headerLink[i].innerHTML.indexOf("Демо-счет") !== -1 && headerLink[i].classList.contains("dropdown__item")){
+      headerLink[i].classList.add('current-link');
+    }else if(headerLink[i].innerHTML.indexOf("Демо-счет") !== -1 && headerLink[i].classList.contains("dropdown__item")){
+      headerLink[i].classList.add('current-link');
+    }
+  }
+}
+if (window.location.href.indexOf("demo-progress.html") != -1){
+  for(let i = 0; i < headerLink.length; i++){
+    headerLink[i].classList.remove('current-link');
+    if(headerLink[i].innerHTML.indexOf("Демо-баланс") !== -1){
+      headerLink[i].classList.add('current-link');
+    }else if(headerLink[i].innerHTML.indexOf("Демо-баланс") !== -1){
+      headerLink[i].classList.add('current-link');
+    }
+  }
+}
+if (window.location.href.indexOf("demo-pay.html") != -1){
+  for(let i = 0; i < headerLink.length; i++){
+    headerLink[i].classList.remove('current-link');
+    if(headerLink[i].innerHTML.indexOf("Демо-баланс") !== -1){
+      headerLink[i].classList.add('current-link');
+    }else if(headerLink[i].innerHTML.indexOf("Демо-баланс") !== -1){
+      headerLink[i].classList.add('current-link');
+    }
+  }
+}
+if (window.location.href.indexOf("orders.html") != -1){
+  for(let i = 0; i < headerLink.length; i++){
+    headerLink[i].classList.remove('current-link');
+    if(headerLink[i].innerHTML.indexOf("Список ордеров") !== -1){
       headerLink[i].classList.add('current-link');
     }
   }
@@ -83,15 +178,20 @@ function dropdown2(el, th){
   if(th.classList.contains('current-link')){drop2open = true} else drop2open = false;
   th.classList.toggle('current-link');
   if(drop2open == false){
+    el.style.display = 'block';
     el.style.opacity = '2';
     el.style.visibility = "visible";
-    el.style.transform = "translateY(0)";
+    el.style.transform = "translateY(0) scale(1)";
     drop2open = true;
   }else{
     el.style.opacity = '0';
     el.style.visibility = "hidden";
-    el.style.transform = "translateY(-100%)";
+    el.style.transform = "translateY(-100%) scale(0)";
     drop2open = false;
+    el.style.display = 'none';
+    setTimeout(() => {
+      el.style.display = 'none';
+    }, 200);
   }
 }
 

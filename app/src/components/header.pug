@@ -60,10 +60,16 @@ mixin header2()
           li.header__li 
             a(href="getrefs.html").header__link Реферальная система
           li.header__li 
-            a(href="#!" onclick="dropdown1(drop1, this)").dropdown__button.dropdown__button_1.header__link Бот <span class="icon-arrow-down"><span>   
+            a(href="#!" onclick="dropdown2(drop1, this)").dropdown__button.dropdown__button_1.header__link Бот <span class="icon-arrow-down"><span>   
             .dropdown__content.dropdown__content_1#drop1
               a(href="bots.html").dropdown__item.header__link Список ботов 
               a(href="new-bot.html").dropdown__item.header__link Добавить бота
+          li.header__li 
+            a(href="#!" onclick="dropdown2(drop3, this)").dropdown__button.dropdown__button_1.header__link Демо-счет <span class="icon-arrow-down"><span>   
+            .dropdown__content.dropdown__content_1#drop3
+              a(href="bots.html").dropdown__item.header__link Демо-баланс
+              a(href="bots.html").dropdown__item.header__link Демо-счет
+        a(href="orders.html").header__link.header3__link Список ордеров
         button(type="button").header__lang.header__lang_secondary
           img(src="images/eng.webp", alt="eng").header__lang-img 
           p.header__lang-p eng
@@ -80,9 +86,15 @@ mixin header3()
         a(href="dates.html").header__link.header3__link Личные данные
         a(href="getrefs.html").header__link.header3__link Реферальная система
         .drop
+          a(href="#!" onclick="dropdown2(drop4, this)").dropdown__button.dropdown__button_2.header__link.header3__link Демо-счет <span class="icon-arrow-down"><span>   
+          .dropdown__content.absolute.dropdown__content_2#drop4
+            a(href="demo-balance.html").dropdown2__item.header__link.header3__link Демо-баланс
+            a(href="demo.html").dropdown__item.header__link Демо-счет
+        .drop
           a(href="#!" onclick="dropdown2(drop2, this)").dropdown__button.dropdown__button_2.header__link.header3__link Бот <span class="icon-arrow-down"><span>   
-          .dropdown__content.dropdown__content_2#drop2
+          .dropdown__content.absolute.dropdown__content_2#drop2
             a(href="bots.html").dropdown2__item.header__link.header3__link Список ботов 
             a(href="new-bot.html").dropdown2__item.header__link.header3__link Добавить бота
-      a(href="index.html").header3__btn Выйти из личного кабинета 
+        a(href="orders.html").header__link.header3__link Список ордеров
+        
       
