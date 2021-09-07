@@ -19,6 +19,7 @@ $gradient: linear-gradient(275.37deg, #476172 0%, #3094C4 100%);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   &:focus{
     outline: none;
   }

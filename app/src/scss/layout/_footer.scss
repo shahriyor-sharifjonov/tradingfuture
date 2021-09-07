@@ -85,6 +85,11 @@
       margin-bottom: 50px;
     }
   }
+  &__li{
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
   &__btns{
     display: flex;
     flex-direction: column;

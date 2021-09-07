@@ -67,6 +67,11 @@ window.onclick = (e: MouseEvent) => {
   )
     menuToggle();
 };
+window.onclick = function(e){
+  if(e.target.classList.contains('header__link')){
+    menuToggle()
+  }
+}
 
 
 let drop1open = false;
