@@ -71,8 +71,17 @@ window.onclick = function(e){
   if(e.target.classList.contains('header__link')){
     menuToggle()
   }
+  if(e.target.classList.contains('header__lang-item') || e.target.classList.contains('header__lang-p_2')){
+    const bla = document.getElementsByClassName('header__lang_main')
+    for(let i = 0; i < bla.length; i++){
+      bla[i].classList.remove('active');
+    }
+  }
 }
 
+function toggleActive(el){
+  el.classList.toggle('active')
+}
 
 let drop1open = false;
 function dropdown1(el, th){

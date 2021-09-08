@@ -23,6 +23,17 @@ mixin footer()
         a(href="#!").footer__btn.intro__btn Кнопка 
         a(href="#!").footer__btn.intro__btn Регистрация/авторизация
         .footer__gradient 
-      button.header__lang.footer__lang
-        img(src="images/eng.webp", alt="eng").header__lang-img
-        p.header__lang-p ENG
+      .header__lang-drop
+        button(type="button" onclick="toggleActive(this)").header__lang.header__lang_main
+          img(src="images/eng.webp", alt="eng").header__lang-img 
+          p.header__lang-p eng 
+        .header__lang-content
+          button(type="button").header__lang-item 
+            img(src="images/rus.webp", alt="eng").header__lang-img 
+            p.header__lang-p.header__lang-p_2 rus 
+          button(type="button").header__lang-item 
+            img(src="images/ua.webp", alt="eng").header__lang-img 
+            p.header__lang-p.header__lang-p_2 ua 
+          button(type="button").header__lang-item 
+            img(src="images/fr.webp", alt="eng").header__lang-img 
+            p.header__lang-p.header__lang-p_2 fr 

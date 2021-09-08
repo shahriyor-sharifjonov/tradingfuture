@@ -50,10 +50,44 @@
     width: max-content;
     padding: 7px 25px;
     border: 2px solid #3094C4;
-    z-index: 20;
+    position: relative;
+    &-drop{
+      z-index: 20;
+      position: relative;
+    }
+    &-item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 7px 0;
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
+      p{
+        color: #fff;
+      }
+    }
+    &~.header__lang-content{
+      display: none;
+    }
+    &.active{
+      &~.header__lang-content{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: transparent;
+        margin-top: 10px;
+        width: 100%;
+        background: #000;
+        border: 2px solid #3094C4;
+      }
+    }
     &-img{
       max-width: 100%;
       margin-right: 10px;
+      width: 29px;
+      height: 15px;
     }
     &-p{
       font-size: 12px;
