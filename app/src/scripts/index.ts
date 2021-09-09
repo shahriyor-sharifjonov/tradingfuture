@@ -68,7 +68,7 @@ window.onclick = (e: MouseEvent) => {
     menuToggle();
 };
 window.onclick = function(e){
-  if(e.target.classList.contains('header__link')){
+  if(e.target.classList.contains('header__link') && menuOpened && !e.target.classList.contains('dropdown__button')){
     menuToggle()
   }
   if(e.target.classList.contains('header__lang-item') || e.target.classList.contains('header__lang-p_2')){
@@ -100,6 +100,14 @@ function dropdown1(el, th){
 }
 
 
+let header = document.querySelector('.header');
+window.addEventListener('scroll', function(){ 
+  if(this.scrollY > 40){
+    header.classList.add('scrolled')
+  }else{
+    header.classList.remove('scrolled')
+  }
+})
 
 
 const headerLink = document.getElementsByClassName('header__link');
